@@ -1,0 +1,27 @@
+ <h1 class="display-4">Dogs images</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Image</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        @if (ViewBag.Files != null)
+        {
+            int count = 1;
+            foreach (Uri file in ViewBag.Files)
+            {
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@file</td>
+                    <td>
+                        <img src="@file.AbsoluteUri" width="200px"/>
+                    </td>
+                </tr>
+                count++;
+            }
+        }
+    </tbody>
+</table>
