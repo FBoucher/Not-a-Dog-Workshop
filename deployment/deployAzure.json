@@ -12,7 +12,7 @@
     },
     "variables": {
         "suffix": "[uniqueString(resourceGroup().id, resourceGroup().location)]",
-        "storageName": "[concat('stg', variables('suffix'))]",
+        "storageName": "[concat(parameters('webAppName'), variables('suffix'), 'stg')]",
         "appSvcPlanName": "[concat(parameters('webAppName'), variables('suffix'), 'plan')]"
     },
     "resources": [
