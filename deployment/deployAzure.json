@@ -83,7 +83,8 @@
                     "properties": {
                         "repoUrl":"https://github.com/FBoucher/Not-a-Dog-Workshop.git",
                         "branch": "add-deploy-button",
-                        "isManualIntegration": false
+                        "publishRunbook": true,
+                        "IsManualIntegration": true
                     }
                 }
             ]
