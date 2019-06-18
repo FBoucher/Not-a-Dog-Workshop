@@ -33,7 +33,7 @@
                 {
                     "type": "blobServices/containers",
                     "apiVersion": "2018-07-01",
-                    "name": "images",
+                    "name": "[concat('default/', 'images')]",
                     "dependsOn": [
                         "[variables('storageName')]"
                     ],
