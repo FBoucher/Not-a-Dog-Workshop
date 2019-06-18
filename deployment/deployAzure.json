@@ -13,7 +13,6 @@
     },
     "variables": {
         "suffix": "[substring(toLower(uniqueString(resourceGroup().id, resourceGroup().location)),0,5)]",
-        "webAppName": "[concat(parameters('webAppName'), variables('suffix'))]",
         "storageName": "[toLower(concat(parameters('webAppName'), variables('suffix'), 'stg'))]",
         "appSvcPlanName": "[concat(parameters('webAppName'), variables('suffix'), 'plan')]"
     },
@@ -34,9 +33,9 @@
                 {
                     "type": "blobServices/containers",
                     "apiVersion": "2018-03-01-preview",
-                    "name": "[concat('images')]",
+                    "name": "images",
                     "dependsOn": [
-                        "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageName'))]"
+                        "[variables('storageName')]"
                     ],
                     "properties": {
                         "publicAccess": "Blob"
@@ -47,18 +46,18 @@
         {
             "type": "Microsoft.Web/sites",
             "apiVersion": "2018-02-01",
-            "name": "[variables('webAppName')]",
+            "name": "[parameters('webAppName')]",
             "location": "[resourceGroup().location]",
             "tags": {
                 "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('appSvcPlanName'))]": "Resource",
-                "displayName": "[variables('webAppName')]"
+                "displayName": "[parameters('webAppName')]"
             },
             "dependsOn": [
                 "[resourceId('Microsoft.Web/serverfarms/', variables('appSvcPlanName'))]",
                 "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageName'))]"
             ],
             "properties": {
-                "name": "[variables('webAppName')]",
+                "name": "[parameters('webAppName')]",
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms/', variables('appSvcPlanName'))]"
             },
             "resources": [
@@ -67,7 +66,7 @@
                     "type": "config",
                     "name": "connectionstrings",
                     "dependsOn": [
-                        "[resourceId('Microsoft.Web/sites', variables('webAppName'))]",
+                        "[resourceId('Microsoft.Web/sites', parameters('webAppName'))]",
                         "[resourceId('Microsoft.Storage/storageAccounts', variables('storageName'))]"
                     ],
                     "properties": {
@@ -82,12 +81,12 @@
                     "name": "web",
                     "type": "sourcecontrols",
                     "dependsOn": [
-                        "[resourceId('Microsoft.Web/Sites', variables('webAppName'))]"
+                        "[resourceId('Microsoft.Web/Sites', parameters('webAppName'))]"
                     ],
                     "properties": {
                         "RepoUrl":"https://github.com/FBoucher/Not-a-Dog-Workshop.git",
                         "branch": "add-deploy-button",
-                        "publishRunbook": true
+                        "IsManualIntegration": true
                     }
                 }
             ]
