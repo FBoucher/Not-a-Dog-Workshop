@@ -7,12 +7,13 @@
             "metadata": {
                 "description": "The name of your Web App."
             },
-            "defaultValue": "frankdogdemo"
+            "defaultValue": "frankdogdemo",
+            "maxLength": 12
         }
     },
     "variables": {
-        "suffix": "[uniqueString(resourceGroup().id, resourceGroup().location)]",
-        "storageName": "[concat(parameters('webAppName'), variables('suffix'), 'stg')]",
+        "suffix": "[substring(toLower(uniqueString(resourceGroup().id, resourceGroup().location)),0,5)]",
+        "storageName": "[toLower(concat(parameters('webAppName'), variables('suffix'), 'stg'))]",
         "appSvcPlanName": "[concat(parameters('webAppName'), variables('suffix'), 'plan')]"
     },
     "resources": [
