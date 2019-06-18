@@ -60,9 +60,20 @@
                         "ApplicationStorage": {
                             "value": "[Concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageName'),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageName')), providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).keys[0].value)]",
                             "type": "Custom"
-                        },
+                        }
+                    }
+                },
+                {
+                    "apiVersion": "2015-08-01",
+                    "name": "web",
+                    "type": "sourcecontrols",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/Sites', parameters('webAppName'))]"
+                    ],
+                    "properties": {
                         "RepoUrl":"https://github.com/FBoucher/Not-a-Dog-Workshop.git",
-                        "branch": "add-deploy-button"
+                        "branch": "add-deploy-button",
+                        "IsManualIntegration": true
                     }
                 }
             ]
