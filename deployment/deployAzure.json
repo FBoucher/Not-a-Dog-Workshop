@@ -54,6 +54,7 @@
                 "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageName'))]"
             ],
             "properties": {
+                "name": "[variables('webAppName')]",
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms/', variables('appSvcPlanName'))]"
             },
             "resources": [
@@ -82,7 +83,7 @@
                     "properties": {
                         "repoUrl":"https://github.com/FBoucher/Not-a-Dog-Workshop.git",
                         "branch": "add-deploy-button",
-                        "publishRunbook": true
+                        "isManualIntegration": false
                     }
                 }
             ]
