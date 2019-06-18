@@ -79,7 +79,7 @@
                 },
                 {
                     "apiVersion": "2015-08-01",
-                    "name": "web",
+                    "name": "[concat('web', variables('suffix'))]",
                     "type": "sourcecontrols",
                     "dependsOn": [
                         "[resourceId('Microsoft.Web/Sites', variables('webAppName'))]"
