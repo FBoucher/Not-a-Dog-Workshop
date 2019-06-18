@@ -78,7 +78,7 @@
                     }
                 },
                 {
-                    "apiVersion": "2017-05-15-preview",
+                    "apiVersion": "2018-02-01",
                     "name": "[concat('web', variables('suffix'))]",
                     "type": "sourcecontrols",
                     "dependsOn": [
