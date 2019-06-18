@@ -31,7 +31,7 @@
             "kind": "StorageV2",
             "resources": [
                 {
-                    "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+                    "type": "blobServices/containers",
                     "apiVersion": "2018-07-01",
                     "name": "images",
                     "dependsOn": [
