@@ -79,15 +79,15 @@
                 },
                 {
                     "apiVersion": "2015-08-01",
-                    "name": "[concat('web', variables('suffix'))]",
+                    "name": "web",
                     "type": "sourcecontrols",
                     "dependsOn": [
-                        "[resourceId('Microsoft.Web/Sites', variables('webAppName'))]"
+                        "[variables('webAppName')]"
                     ],
                     "properties": {
                         "RepoUrl":"https://github.com/FBoucher/Not-a-Dog-Workshop.git",
                         "branch": "add-deploy-button",
-                        "IsManualIntegration": true
+                        "publishRunbook": true
                     }
                 }
             ]
