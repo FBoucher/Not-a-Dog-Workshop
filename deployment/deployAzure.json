@@ -40,7 +40,8 @@
                 "displayName": "[parameters('webAppName')]"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Web/serverfarms/', variables('appSvcPlanName'))]"
+                "[resourceId('Microsoft.Web/serverfarms/', variables('appSvcPlanName'))]",
+                "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageName'))]"
             ],
             "properties": {
                 "name": "[parameters('webAppName')]",
