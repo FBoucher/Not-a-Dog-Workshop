@@ -7,13 +7,22 @@
             "metadata": {
                 "description": "The name of your Web App."
             },
-            "defaultValue": "frankdogdemo"
+            "defaultValue": "hackdogdemo",
+            "maxLength": 12
+        },
+        "branchName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of your Git branch (Default: master)."
+            },
+            "defaultValue": "master"
         }
     },
     "variables": {
-        "suffix": "[uniqueString(resourceGroup().id, resourceGroup().location)]",
-        "storageName": "[concat('stg', variables('suffix'))]",
-        "appSvcPlanName": "[concat(parameters('webAppName'), variables('suffix'), 'plan')]"
+        "suffix": "[substring(toLower(uniqueString(resourceGroup().id, resourceGroup().location)),0,5)]",
+        "webAppName": "[toLower(concat(parameters('webAppName'), variables('suffix')))]",
+        "storageName": "[concat(variables('webAppName'), 'stg')]",
+        "appSvcPlanName": "[concat(variables('webAppName'), 'plan')]"
     },
     "resources": [
         {
@@ -27,22 +36,32 @@
             "sku": {
                 "name": "Standard_LRS"
             },
-            "kind": "StorageV2"
+            "kind": "StorageV2",
+            "resources": [
+                {
+                    "type": "blobServices/containers",
+                    "apiVersion": "2018-07-01",
+                    "name": "[concat('default/', 'images')]",
+                    "dependsOn": [
+                        "[variables('storageName')]"
+                    ],
+                    "properties": {
+                        "publicAccess": "Blob"
+                    }
+                }
+            ]
         },
         {
             "type": "Microsoft.Web/sites",
             "apiVersion": "2018-02-01",
-            "name": "[parameters('webAppName')]",
+            "name": "[variables('webAppName')]",
             "location": "[resourceGroup().location]",
-            "tags": {
-                "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('appSvcPlanName'))]": "Resource",
-                "displayName": "[parameters('webAppName')]"
-            },
             "dependsOn": [
-                "[resourceId('Microsoft.Web/serverfarms/', variables('appSvcPlanName'))]"
+                "[resourceId('Microsoft.Web/serverfarms/', variables('appSvcPlanName'))]",
+                "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageName'))]"
             ],
             "properties": {
-                "name": "[parameters('webAppName')]",
+                "name": "[variables('webAppName')]",
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms/', variables('appSvcPlanName'))]"
             },
             "resources": [
@@ -51,7 +70,7 @@
                     "type": "config",
                     "name": "connectionstrings",
                     "dependsOn": [
-                        "[resourceId('Microsoft.Web/sites', parameters('webAppName'))]",
+                        "[resourceId('Microsoft.Web/sites', variables('webAppName'))]",
                         "[resourceId('Microsoft.Storage/storageAccounts', variables('storageName'))]"
                     ],
                     "properties": {
@@ -59,6 +78,20 @@
                             "value": "[Concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageName'),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageName')), providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).keys[0].value)]",
                             "type": "Custom"
                         }
+                    }
+                },
+                {
+                    "apiVersion": "2018-02-01",
+                    "name": "web",
+                    "type": "sourcecontrols",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/sites', variables('webAppName'))]"
+                    ],
+                    "properties": {
+                        "repoUrl":"https://github.com/FBoucher/Not-a-Dog-Workshop.git",
+                        "branch": "[parameters('branchName')]",
+                        "publishRunbook": true,
+                        "IsManualIntegration": true
                     }
                 }
             ]
