@@ -20,8 +20,8 @@ namespace NotADog.Controllers
             var files = _blobStorageManager.GetFiles("images").Select(item => item.Uri).ToList();
             
             if(files.Count == 0){
-                _blobStorageManager.UploadFile("https://github.com/FBoucher/Not-a-Dog-Workshop/raw/master/medias/dogs-way.jpg", "images");
-                _blobStorageManager.UploadFile("https://github.com/FBoucher/Not-a-Dog-Workshop/raw/master/medias/tesla-cat.jpg", "images");
+                _blobStorageManager.UploadFile("https://github.com/FBoucher/Not-a-Dog-Workshop/raw/add-startup-task/medias/dogs-way.jpg", "images");
+                _blobStorageManager.UploadFile("https://github.com/FBoucher/Not-a-Dog-Workshop/raw/add-startup-task/medias/tesla-cat.jpg", "images");
                 files = _blobStorageManager.GetFiles("images").Select(item => item.Uri).ToList();
             }
 
