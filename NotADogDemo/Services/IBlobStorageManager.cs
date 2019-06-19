@@ -6,5 +6,7 @@ namespace NotADog.Services
     public interface IBlobStorageManager
     {
         IEnumerable<IListBlobItem> GetFiles(string containerName);
+
+        bool UploadFile(string fileUrl, string containerName);
     }
 }
