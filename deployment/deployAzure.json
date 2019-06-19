@@ -7,8 +7,15 @@
             "metadata": {
                 "description": "The name of your Web App."
             },
-            "defaultValue": "frankdogdemo",
+            "defaultValue": "hackdogdemo",
             "maxLength": 12
+        },
+        "branchName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of your Git branch (Default: master)."
+            },
+            "defaultValue": "master"
         }
     },
     "variables": {
@@ -82,7 +89,7 @@
                     ],
                     "properties": {
                         "repoUrl":"https://github.com/FBoucher/Not-a-Dog-Workshop.git",
-                        "branch": "add-deploy-button",
+                        "branch": "[parameters('branchName')]",
                         "publishRunbook": true,
                         "IsManualIntegration": true
                     }
