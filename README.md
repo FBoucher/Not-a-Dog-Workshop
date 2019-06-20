@@ -22,7 +22,7 @@ There is many different ways to deploy to Azure. You can deploy directly develop
 
 ## Part 2 - Creating the Cognitive Services
 
-...
+The goal of this step is to create a Cognitive Service, and use it's Vision API to detect dogs in our images.
 
 [How to Create an Cognitive Services](Part2-Create-an-Cognitive-Services.md)
 
