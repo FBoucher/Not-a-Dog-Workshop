@@ -39,4 +39,4 @@ To do this we will use an Azure Function.
 
 Does our Dog detector will work correctly?! This time to test our application...
 
-[How to use the Automatic Not a Dog Application](Part4-Its-time-to-play.md)
+**[How to use the Automatic Not a Dog Application](Part4-Its-time-to-play.md)**

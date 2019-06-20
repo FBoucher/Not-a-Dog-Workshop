@@ -4,9 +4,25 @@ Now that we have some Artificial Intelligence (AI) that will analyze the images,
 
 To do this we will use an Azure Function. 
 
+> The Function are part of the serverless offer of Microsoft. They provide an efficient way to execute code at scale without being expensive. [To learn more about Azure Function here](https://azure.microsoft.com/en-ca/services/functions/?WT.mc_id=tohack-github-frbouche).
+
 ## Creating the Function App
 
-...
+Prior to the workshop you should have [installed all the prerequisites](workshop-prerequisites.md). If it's not done now it's time. 
+
+Let's open Visual Studio Code (aka VSCode). From the left menu bar select the **Azure** icon to open the Azure Function Extension.
+
+![functionExtension][functionExtension]
+
+To create a Function App, click on the first icon (the folder with a lightning bolt).
+
+1. Create a new local folder and name it **HackDemo-Func**
+1. When prompt for the language, select C#.
+1. When Prompt for the project first function, select **Skip for now**
+
+    ![skipForNow][skipForNow]
+
+1. Finally select the **Open in current window** option.
 
 ## Creating a DogDetector Function (Blob trigger)
 
@@ -94,4 +110,5 @@ You have now completed this part of the workshop. **You can continue with Part 4
 
 
 
-[azurePortal]: medias/azurePortal.png "The Azure Portal"
+[functionExtension]: medias/functionExtension.png "The Azure Function Extension"
+[skipForNow]: medias/skipForNow.png "Skip For Now"
