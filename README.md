@@ -29,9 +29,11 @@ The goal of this step is to create a Cognitive Service, and use it's Vision API 
 
 ## Part 3 - Build and Deploy The Azure Function
 
-....
+Now that we have some Artificial Intelligence (AI) that will analyze the images, we need some code that could be executed every time a new picture is added.
 
-[Build and Deploy The Azure Function](file.md)
+To do this we will use an Azure Function. 
+
+[Build and Deploy The Azure Function](Part3-Build-and-Deploy-The-Azure-Function.md)
 
 ## Part 4 - It's time to play!
 
