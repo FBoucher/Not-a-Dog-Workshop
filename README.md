@@ -24,7 +24,7 @@ There is many different ways to deploy to Azure. You can deploy directly develop
 
 The goal of this step is to create a Cognitive Service, and use it's Vision API to detect dogs in our images.
 
-[How to Create an Cognitive Services](Part2-Create-an-Cognitive-Services.md)
+**[How to Create an Cognitive Services](Part2-Create-an-Cognitive-Services.md)**
 
 
 ## Part 3 - Build and Deploy The Azure Function
@@ -33,10 +33,10 @@ Now that we have some Artificial Intelligence (AI) that will analyze the images,
 
 To do this we will use an Azure Function. 
 
-[Build and Deploy The Azure Function](Part3-Build-and-Deploy-The-Azure-Function.md)
+**[Build and Deploy The Azure Function](Part3-Build-and-Deploy-The-Azure-Function.md)**
 
 ## Part 4 - It's time to play!
 
-...
+Does our Dog detector will work correctly?! This time to test our application...
 
-[How to use the Automatic Not a Dog Application](file.md)
+[How to use the Automatic Not a Dog Application](Part4-Its-time-to-play.md)
