@@ -14,11 +14,11 @@ To get the best of this Not a Dog Workshop, we **strongly** suggest that you pre
 
 ## Part 1 - Deploy the solution to Azure
 
-To get started we will deploy a simple Asp\.Net Core MVC application to Azure.
+To get started we will deploy a simple Asp.Net Core MVC application to Azure. This website will display all the images contain in our Azure storage.
 
-There is many different ways to deploy to Azure from development tools like Visual Studio to a complete Continuous Integration and Continuous Deployment (CI-CD).  
+There is many different ways to deploy to Azure. You can deploy directly development tools like Visual Studio, build a Continuous Integration and Continuous Deployment (CI-CD).  For today's workshop everything is prepared for you. Click the following link to get started.
 
-[Deploying the startup solution to Azure](Step1-Deploying-the-startupSolution.md)
+**[Deploying the startup solution to Azure](Part1-Deploying-the-startupSolution.md)**
 
 ## Part 2 - Creating the Cognitive Services
 

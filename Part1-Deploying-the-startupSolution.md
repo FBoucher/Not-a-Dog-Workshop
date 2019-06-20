@@ -1,5 +1,5 @@
 
-# Deploying the startup solution to Azure
+# Part 1 - Deploying the startup solution to Azure
 
 To get started we will deploy a simple Asp.Net Core MVC application to Azure. There is many different ways to deploy to Azure from development tools like Visual Studio to a complete Continuous Integration and Continuous Deployment (CI-CD). Today we will the the **Deploy to Azure** button.
 
@@ -57,13 +57,15 @@ In the Section (B), this is where the resources contained in this specific resou
 
 > The first time you get to this page some images are loaded, it;s normal that it takes more time.
 
-The website display in a list all images available in our storage.  The intension is to have only picture of dogs. As you can see there is a picure of a cat in the on our dog images folder. 
+The website display in a list all images available in our storage.  The intension is to have only picture of dogs. As you can see there is a picture of a cat in the on our dog images folder. 
 
-The goal of this workshop is to build an automatic solution that will discart all picture tha are not dogs.
+The goal of this workshop is to build an automatic solution that will discard all picture that are not dogs.
 
 ### Coming Next
 
-You hav now completed this part of the workshop. You can continue with Part 2: [Create an Cognitive Services](Part2-Create-an-Cognitive-Services.md)
+You have now completed this part of the workshop. **You can continue with Part 2: [Create an Cognitive Services](Part2-Create-an-Cognitive-Services.md)**.
+
+---
 
 ## Learn more
 
