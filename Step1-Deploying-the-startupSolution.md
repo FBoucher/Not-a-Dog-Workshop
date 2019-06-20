@@ -50,8 +50,20 @@ In the Section (B), this is where the resources contained in this specific resou
 
 1. Click on the App Service to open the webapp blade.
 1. Same principle here, options on the left details on the right. For now let's see what the website look like. 
-   - In the top-right section of the blade you will find the URL ().
+   - In the top-right section of the blade you will find the URL, click on it to open the web page.
+     ![websiteURL][websiteURL]
+1. There it is! Very basic, but this is all we need for today's workshop. In the top menu click on **Images**.
+     ![website][website]
 
+> The first time you get to this page some images are loaded, it;s normal that it takes more time.
+
+The website display in a list all images available in our storage.  The intension is to have only picture of dogs. As you can see there is a picure of a cat in the on our dog images folder. 
+
+The goal of this workshop is to build an automatic solution that will discart all picture tha are not dogs.
+
+### Coming Next
+
+You hav now completed this part of the workshop. You can continue with Part 2: [Create an Cognitive Services](Part2-Create-an-Cognitive-Services.md)
 
 ## Learn more
 
@@ -63,6 +75,7 @@ For the service plan, and the storage account we also added some short suffix to
 
 All those settings are defined in the Azure Resource Manager (ARM) template that was used in the deployment. The ARM template is define in the file [deployAzure.json](deployment/deployAzure.json). It a very strong tool to deploy in Azure. You can learn more about ARM template [here](http://)
 
+:warning: More to come :warning:
 
 1. **App Service**: This is where the code got deployed, it's the website.
    
@@ -76,3 +89,5 @@ All those settings are defined in the Azure Resource Manager (ARM) template that
 [clickNotification]: medias/clickNotification.png "Click the notification"
 [deploymentCompleted]: medias/deploymentCompleted.png "Deployment is Complete"
 [resourceGroup]: medias/resourceGroup.png "Resource Group blade"
+[websiteURL]: medias/websiteURL.png "Website URL"
+[website]: medias/website.png "Website Not a Dog demo"
