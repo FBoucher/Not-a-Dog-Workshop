@@ -135,12 +135,55 @@ You may have some yellow warning message about Newtonsoft.Json version, search o
 
 ## Deploying the Function App to Azure
 
-...
+All the code is done. It's time to deploy our Azure Function to Azure. Let's return to the Azure Function Extension (from the left menu). This time click on... yes the third icon (the one with the Up arrow).
+
+1. You may need to login to Azure, to authorize VSCode to access to Azure.
+1. Select your subscription
+1. Click the **Create New Function App in Azure**
+1. You will need to provide a **globally unique name**. If you read the [Learn more](https://github.com/FBoucher/Not-a-Dog-Workshop/blob/master/Part1-Deploying-the-startupSolution.md#learn-more) section of part 1 you know that a suffix was added to all your resources. You can use it if you want (ex: DogDemo-FuncApp6l3th) or just add your name in the mixt (ex: DogDemo-FuncFrank).
+1. Now a few other resources will be created. It can takes 1-2 minutes.
+
+ Once the resources are created VSCode will deploy your code. Another minute. It's all done when you see those notification.
+
+![deploymentDone][deploymentDone]
 
 
 ## Configuring the Azure Function
 
-...
+We now need to provide the information to our Function so it can monitor our Azure Storage and access our Vision API.
+
+1. Open the file `local.settings.json`
+1. Add two new configuration. Use the **Endpoint** and **Key** saved previously.
+
+```
+    ,"ComputerVision:ApiKey":"60b5aaaaae5445e93ca5bbbbb1268c2e"
+    ,"ComputerVision:Endpoint":"https://eastus.api.cognitive.microsoft.com/"
+```
+
+The only configuration that we need is the connection string to our storage.
+
+1. Go back in the portal. 
+1. Go in your Resource group.
+1. Select your Storage account.
+    - From the left option select **Access keys**.
+    - Copy one of the Connection string.
+
+    ![connectionString][connectionString]
+
+1. Back in VSCOde, in the file `local.settings.json`, replace the VALUE of setting **AzureWebJobsStorage** by the Connection string we just took from the portal.
+1. Save your changes.
+
+## Upload the Configuration
+
+The last step is to upload the configuration into Azure. Thanks to the Function extension it will be easy.
+
+1. From the Azure Function extension, expend your subscription (with the key icon).
+1. Expend the FunctionApp (with the lightning bolt icon)
+1. Right-click on **Application Settings**, and select **Upload Local Settings**
+
+![uploadSettings][uploadSettings]
+
+1. If prompt, overrides all.
 
 
 ## Coming Next
@@ -160,4 +203,7 @@ You have now completed this part of the workshop. **You can continue with Part 4
 [skipForNow]: medias/skipForNow.png "Skip For Now"
 [warningStorage]: medias/warningStorage.png "Warning"
 [buildSucceeded]: medias/buildSucceeded.png "Build Succeeded"
+[deploymentDone]: medias/deploymentDone.png "Deployment Done"
+[connectionString]: medias/connectionString.png "Storage connectionString"
+[uploadSettings]: medias/uploadSettings.png "Upload Settings"
 
