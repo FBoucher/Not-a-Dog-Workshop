@@ -24,7 +24,46 @@ To create a Function App, click on the first icon (the folder with a lightning b
 
 1. Finally select the **Open in current window** option.
 
-## Creating a DogDetector Function (Blob trigger)
+It may takes a few second while VSCode build set all your project. Once it's done you will have a few files and folder.  We are now ready to create our Azure Function.
+
+## Creating a DogDetector Azure Function 
+
+There is many different type of Azure Function, or many different ways to interact with it. In this workshop what we need is a Function that will get triggered every time a new image is uploaded into our Azure Blob Storage. We need a Blob trigger.
+
+1. From the Azure Function extension, click on the second icon (the lightning bolt with a little + sign).
+1. Select **BlobTrigger** as template.
+1. Enter **DogDetector** as function name.
+1. Enter **DogDemo.Function** as namespace.
+1. Enter **AzureWebJobsStorage** as settings from "local.settings.json"
+1. The name of our container is "images", so the path that our function will monitor is also **images**. Enter Images.
+
+You should have a warning popup at this time. Since we won't debug it locally, we can **skip it for now**.
+
+![warningStorage][warningStorage]
+
+## Add the missing references
+
+Before we add some code inside the Azure Function let's add some requirement features. Let's first start by adding some package we will need. Look into the file `HackDemo-Func.csproj`. Currently you should have only one `<PackageReference>`, referencing the `Microsoft.NET.Sdk.Functions` and `Microsoft.Azure.WebJobs.Extensions.Storage`. 
+
+Let's add a few more.
+
+Open the terminal, from the top menu **Terminal** or with the shortcut ( Ctrl + \` ). Be sure you are in the `DogDemo-FuncApp` folder, and enter the following command.
+
+    dotnet add package Newtonsoft.Json
+
+If you look again the file `HackDemo-Func.csproj`, you will see that the package is now referenced. 
+
+Repeat the previous command for the package 
+
+    dotnet add package Microsoft.Azure.CognitiveServices.Vision.ComputerVision
+
+and 
+
+    dotnet add package Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator
+ 
+## Add the code inside the Azure Function
+
+Let's replace all the code of the `DogDetector.cs` by the following. (The file is also available [here](snippets/DogDetector.cs))
 
 ```csharp
 
@@ -86,6 +125,13 @@ namespace DogDemo.Function
 
 ```
 
+You can test to see if your solution combile by executing the following command in the terminal:
+
+    dotnet build
+
+You may have some yellow warning message about Newtonsoft.Json version, search or a green Build succeeded.
+
+![buildSucceeded][buildSucceeded]
 
 ## Deploying the Function App to Azure
 
@@ -112,3 +158,6 @@ You have now completed this part of the workshop. **You can continue with Part 4
 
 [functionExtension]: medias/functionExtension.png "The Azure Function Extension"
 [skipForNow]: medias/skipForNow.png "Skip For Now"
+[warningStorage]: medias/warningStorage.png "Warning"
+[buildSucceeded]: medias/buildSucceeded.png "Build Succeeded"
+
