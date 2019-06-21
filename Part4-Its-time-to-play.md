@@ -1,10 +1,10 @@
 # Part 4 - How to use the Automatic Not a Dog Application
 
-Does our Dog detector is working correctly?! This is the moment of truth.
+Does our dog detector is working correctly?! This is the moment of truth.
 
 ## Upload new images
 
-There is many different way to upload files into the Azure blob storage. But for today let's use the portal.
+There are many different ways to upload files into the Azure blob storage. But for today let's use the portal.
 
 1. In the Azure portal, select your storage account that you deployed.
 1. In the lower right section click on **Blobs**
@@ -13,8 +13,8 @@ There is many different way to upload files into the Azure blob storage. But for
 
 1. That will display the containers. Click on **images**.
 1. Click the Upload button.
-1. From the new panel on the right click the button to find a file locally.
-1. Click the button Upload.
+1. From the new panel on the right-click the button to find a file locally.
+1. Click the button **Upload**.
 
     ![upload][upload]
 
@@ -22,7 +22,7 @@ There is many different way to upload files into the Azure blob storage. But for
 
 ## Validation
 
-To validate that our function really only accept picture of dogs, Let's get back to the Website and refresh the pages images.
+To validate that our function really only accept pictures of dogs, let's get back to the website and refresh the page images.
 
 ![final][final]
 

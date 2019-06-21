@@ -8,7 +8,7 @@ We will be creating a Web application in .NET Core. Therefore you will need the 
 
     dotnet --version
 
-If you have a version equal or greater to 2.1 your are fine. Otherwise we invite you to download a more recent version. In a web browser, navigate to [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download). Select your OS between Windows, Linux, or MacOS and click the button Download .NET Core SDK
+If you have a version equal or greater to 2.1 your are fine. Otherwise we invite you to download a more recent version. In a web browser, navigate to [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download?WT.mc_id=tohack-github-frbouche). Select your OS between Windows, Linux, or MacOS and click the button Download .NET Core SDK
 
 ![dotnetcore][dotnetcore]
 
@@ -22,7 +22,7 @@ Once the installer is downloaded follow the instruction in run it.  When the ins
 
 Visual Studio Code is a lightweight source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.
 
-It's not a requirement but all labs will assume that you have it installed. To install Visual Studio Code, navigate to [code.visualstudio.com](https://code.visualstudio.com/?wt.mc_id=vscom_downloads), and select your platform.
+It's not a requirement but all labs will assume that you have it installed. To install Visual Studio Code, navigate to [code.visualstudio.com](https://code.visualstudio.com/?WT.mc_id=tohack-github-frbouche), and select your platform.
 
 ![code-select][code-select]
 
@@ -45,7 +45,7 @@ Congratulation, you just installed your first extension.
 
 Having an Azure subscription is mandatory to be able to do the TOHacks Workshop. If you don't own an Azure subscription already, you can create your **free** account today. It comes with 200$ credit, so you can experience almost everything without spending a dime. 
 
-[Create your free Azure account today](https://azure.microsoft.com/en-us/free?WT.mc_id=globalazure-github-frbouche)
+[Create your free Azure account today](https://azure.microsoft.com/en-us/free?WT.mc_id=tohack-github-frbouche)
 
 ![freeAzure][freeAzure]
 
@@ -57,6 +57,3 @@ Having an Azure subscription is mandatory to be able to do the TOHacks Workshop.
 [freeAzure]: medias/freeAzure.png
 [azureDevOps]: medias/azureDevOps.png
 [dotnetcore]: medias/dotnetcore.png
-
-
-

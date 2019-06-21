@@ -1,14 +1,14 @@
-# Part 3 - Build and Deploy The Azure Function
+﻿# Part 3 - Build and Deploy the Azure Function
 
 Now that we have some Artificial Intelligence (AI) that will analyze the images, we need some code that could be executed every time a new picture is added.
 
 To do this we will use an Azure Function. 
 
-> The Function are part of the serverless offer of Microsoft. They provide an efficient way to execute code at scale without being expensive. [To learn more about Azure Function here](https://azure.microsoft.com/en-ca/services/functions/?WT.mc_id=tohack-github-frbouche).
+> The Functions are part of the serverless offer of Microsoft. They provide an efficient way to execute code at scale without being expensive. [To learn more about Azure Function here](https://azure.microsoft.com/en-ca/services/functions/?WT.mc_id=tohack-github-frbouche).
 
 ## Creating the Function App
 
-Prior to the workshop you should have [installed all the prerequisites](workshop-prerequisites.md). If it's not done now it's time. 
+Prior to the workshop, you should have [installed all the prerequisites](workshop-prerequisites.md). If it's not done now, it's time. 
 
 Let's open Visual Studio Code (aka VSCode). From the left menu bar select the **Azure** icon to open the Azure Function Extension.
 
@@ -22,20 +22,20 @@ To create a Function App, click on the first icon (the folder with a lightning b
 
     ![skipForNow][skipForNow]
 
-1. Finally select the **Open in current window** option.
+1. Finally, select the **Open in current window** option.
 
-It may takes a few second while VSCode build set all your project. Once it's done you will have a few files and folder.  We are now ready to create our Azure Function.
+It may take a few seconds while VSCode build set all your project. Once it's done, you will have a few files and folders.  We are now ready to create our Azure Function.
 
 ## Creating a DogDetector Azure Function 
 
-There is many different type of Azure Function, or many different ways to interact with it. In this workshop what we need is a Function that will get triggered every time a new image is uploaded into our Azure Blob Storage. We need a Blob trigger.
+There are many different types of Azure Function, or many different ways to interact with it. In this workshop what we need is a Function that will get triggered every time a new image is uploaded into our Azure Blob Storage. We need a Blob trigger.
 
 1. From the Azure Function extension, click on the second icon (the lightning bolt with a little + sign).
-1. Select **BlobTrigger** as template.
-1. Enter **DogDetector** as function name.
+1. Select **BlobTrigger** as the template.
+1. Enter **DogDetector** as the function name.
 1. Enter **DogDemo.Function** as namespace.
 1. Enter **AzureWebJobsStorage** as settings from "local.settings.json"
-1. The name of our container is "images", so the path that our function will monitor is also **images**. Enter Images.
+1. The name of our container is "images" so the path that our function will monitor is also **images**. Enter Images.
 
 You should have a warning popup at this time. Since we won't debug it locally, we can **skip it for now**.
 
@@ -140,8 +140,8 @@ All the code is done. It's time to deploy our Azure Function to Azure. Let's ret
 1. You may need to login to Azure, to authorize VSCode to access to Azure.
 1. Select your subscription
 1. Click the **Create New Function App in Azure**
-1. You will need to provide a **globally unique name**. If you read the [Learn more](https://github.com/FBoucher/Not-a-Dog-Workshop/blob/master/Part1-Deploying-the-startupSolution.md#learn-more) section of part 1 you know that a suffix was added to all your resources. You can use it if you want (ex: DogDemo-FuncApp6l3th) or just add your name in the mixt (ex: DogDemo-FuncFrank).
-1. Now a few other resources will be created. It can takes 1-2 minutes.
+1. You will need to provide a **globally unique name**. If you read the [Learn more](https://github.com/FBoucher/Not-a-Dog-Workshop/blob/master/Part1-Deploying-the-startupSolution.md#learn-more) section of part 1 you know that a suffix was added to all your resources. You can use it if you want (ex: DogDemo-FuncApp6l3th) or just add your name in the mix (ex: DogDemo-FuncFrank).
+1. Now a few other resources will be created. It can take 1-2 minutes.
 
  Once the resources are created VSCode will deploy your code. Another minute. It's all done when you see those notification.
 
@@ -153,7 +153,7 @@ All the code is done. It's time to deploy our Azure Function to Azure. Let's ret
 We now need to provide the information to our Function so it can monitor our Azure Storage and access our Vision API.
 
 1. Open the file `local.settings.json`
-1. Add two new configuration. Use the **Endpoint** and **Key** saved previously.
+1. Add two new configurations. Use the **Endpoint** and **Key** saved previously.
 
 ```
     ,"ComputerVision:ApiKey":"60b5aaaaae5445e93ca5bbbbb1268c2e"
@@ -175,15 +175,15 @@ The only configuration that we need is the connection string to our storage.
 
 ## Upload the Configuration
 
-The last step is to upload the configuration into Azure. Thanks to the Function extension it will be easy.
+The last step is to upload the configuration into Azure. Thanks to the Function extension, it will be easy.
 
 1. From the Azure Function extension, expend your subscription (with the key icon).
-1. Expend the FunctionApp (with the lightning bolt icon)
+1. Expand the FunctionApp (with the lightning bolt icon)
 1. Right-click on **Application Settings**, and select **Upload Local Settings**
 
 ![uploadSettings][uploadSettings]
 
-1. If prompt, overrides all.
+1. If prompt overrides all.
 
 
 ## Coming Next
