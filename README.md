@@ -37,6 +37,6 @@ To do this we will use an Azure Function.
 
 ## Part 4 - It's time to play!
 
-Does our Dog detector will work correctly?! This time to test our application...
+Does our Dog detector will work correctly?! It's time to test our application...
 
 **[How to use the Automatic Not a Dog Application](Part4-Its-time-to-play.md)**

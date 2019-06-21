@@ -125,7 +125,7 @@ namespace DogDemo.Function
 
 ```
 
-You can test to see if your solution combile by executing the following command in the terminal:
+You can test to see if your solution compile by executing the following command in the terminal:
 
     dotnet build
 
@@ -190,11 +190,7 @@ The last step is to upload the configuration into Azure. Thanks to the Function 
 
 You have now completed this part of the workshop. **You can continue with Part 4: **[How to use the Automatic Not a Dog Application](Part4-Its-time-to-play.md)**.
 
----
 
-## Learn more
-
-...more to come...
 
 
 
