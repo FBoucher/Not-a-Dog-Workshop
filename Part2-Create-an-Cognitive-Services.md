@@ -43,6 +43,7 @@ Now that we know the portal, let's create an instance of Cognitive Service.
 1. From the list select **Computer Vision**
 
     ![typeVision][typeVision]
+
 1. Click the **Create** button.
 
 It's now time to select the properties of your Vision API. 
@@ -88,10 +89,29 @@ You have now completed this part of the workshop. **You can continue with Part 3
 
 ## Learn more
 
-...more to come...
+In this workshop we used one of the Vision API available into the Azure Cognitive Services. However, the Azure Cognitive Services offer many others services. **Some services are even available in Docker Container!**
 
+- **Decision** 
 
+    Build apps that surface recommendations for informed and efficient decision-making.
 
+- **Speech**
+
+    Convert speech into text and text into natural-sounding speech. Translate from one language to another and enable speaker verification and recognition.
+
+- **Language**
+
+    Allow your apps to process natural language with pre-built scripts, evaluate sentiment and learn how to recognize what users want.
+
+- **Search**
+
+    Add Bing Search APIs to your apps and harness the ability to comb billions of webpages, images, videos, and news with a single API call.
+
+- **Vision**
+
+    Recognize, identify, caption, index, and moderate your pictures, videos, and digital ink content.
+
+[You can get started for free, see interactive demo and even get some starter kit here](https://azure.microsoft.com/en-ca/services/cognitive-services/?WT.mc_id=cloud5mins-youtube-frbouche)
 
 [azurePortal]: medias/azurePortal.png "The Azure Portal"
 [typeVision]: medias/typeVision.png "Create a Vision"

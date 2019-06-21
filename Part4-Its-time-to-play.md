@@ -26,7 +26,15 @@ To validate that our function really only accept pictures of dogs, let's get bac
 
 ![final][final]
 
+---
 
+## Learn more
+
+You could also execute your function locally!
+
+In Visual studio, put a breakpoint at line 42 `if(IsDog(results))`. The variable `result` contains the information returned by the Vision API. 
+
+You will be able to see all the tag/ metadata sent.
 
 
 

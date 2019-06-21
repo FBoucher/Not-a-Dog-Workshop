@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_apis/build/status/FBoucher.Not-a-Dog-Workshop?branchName=master)](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_build/latest?definitionId=22&branchName=master)
+
 # Not a Dog Workshop
 
 This workshop is for beginners who would like to learn more about the cloud and the try some services available. Today artificial intelligence (AI) can benefit a lot of our application and most of the time it's easier than we think to implement it.
@@ -40,3 +42,20 @@ To do this we will use an Azure Function.
 Does our dog detector will work correctly?! It's time to test our application...
 
 **[How to use the Automatic Not a Dog Application](Part4-Its-time-to-play.md)**
+
+---
+
+## Learn More
+
+At the top of this page there is a badge status
+
+[![Build Status](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_apis/build/status/FBoucher.Not-a-Dog-Workshop?branchName=master)](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_build/latest?definitionId=22&branchName=master)
+
+Every check-in into the master branch will trigger an Azure Pipeline to build the project. This **Azure DevOps** project is public. Click on the badges to open the project and see all the details.
+
+[Azure DevOps](https://azure.microsoft.com/en-ca/services/devops/?WT.mc_id=cloud5mins-youtube-frbouche) is free! You can have:
+- Unlimited number of public or private **projects**
+- **Repositories** (or link your Git repo to it)
+- **Boards** to keep tracks of your works, tasks, issues.
+- Build and Release **Azure Pipeline** to have nice CI-CD processes.
+- So much more!

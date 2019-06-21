@@ -77,14 +77,36 @@ For the service plan, and the storage account we also added some short suffix to
 
 All those settings are defined in the Azure Resource Manager (ARM) template that was used in the deployment. The ARM template is defined in the file [deployAzure.json](deployment/deployAzure.json). It is a very strong tool to deploy in Azure. You can learn more about ARM template [here.](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview?WT.mc_id=cloud5mins-youtube-frbouche)
 
-:warning: More to come :warning:
+The deployment used by the Deploy to Azure button, use this ARM template. This will create the tree resources we need to get started in our project.
 
-1. **App Service**: This is where the code got deployed, it's the website.
-   
-2. **Service Plan**:
-   
-3. **Storage account**: 
+To get the code into our App Service (aka. website) we configure the repository of the AppService to be this GitHub repo. This is done at the line 91 of the `deployAzure.json`
 
+```json
+{
+    "apiVersion": "2018-02-01",
+    "name": "web",
+    "type": "sourcecontrols",
+    "dependsOn": [
+        "[resourceId('Microsoft.Web/sites', variables('webAppName'))]"
+    ],
+    "properties": {
+        "repoUrl":"https://github.com/FBoucher/Not-a-Dog-Workshop.git",
+        "branch": "[parameters('branchName')]",
+        "publishRunbook": true,
+        "IsManualIntegration": true
+    }
+}
+```
+
+Because this GitHub repo does not only contain the project we needed to specify to Kudu (Azure background interface name) where it could fine the project.
+
+This is done in the [.deployment](.deployment) file available a the root. This file is to customize you build. It could redirect to a script but in this case we are pointing the project to deploy.
+
+```
+[config]
+project = NotADogDemo/DogDemo.csproj
+```
+You can learn more about the Kudu interface [here](https://github.com/projectkudu/kudu/wiki/Customizing-deployments).
 
 [PickSubscription]: medias/PickSubscription.png "Select your account"
 [CustomDeployment]: medias/CustomDeployment.png "Complete the custom deployment form"
