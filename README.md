@@ -4,6 +4,8 @@
 
 This workshop is for beginners who would like to learn more about the cloud and the try some services available. Today artificial intelligence (AI) can benefit a lot of our application and most of the time it's easier than we think to implement it.
 
+![Dog or Not a Dog Application](medias/workshopHeader.png)
+
 During this workshop you will deploy and complete a web application able to detect when the pictures are or not dogs and keep our image folder "clean". We call that application: *The automatic Not a Dog application*.
 
 > We are using dogs as topics, but you can definitely extend the capability of the application to manage pictures of an event, the office, or a group. You could automatically generate tags and so many things...
@@ -59,3 +61,11 @@ Every check-in into the master branch will trigger an Azure Pipeline to build th
 - **Boards** to keep tracks of your works, tasks, issues.
 - Build and Release **Azure Pipeline** to have nice CI-CD processes.
 - So much more!
+
+
+## Video version
+
+If you prefer I have a video where I walkthrough all the workshop.
+
+[![YouTube](/medias/YouTubeThubnail.png)](https://youtu.be/ic-eP-gtFSo)
+
