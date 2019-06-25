@@ -7,7 +7,7 @@ To get started we will deploy a simple Asp.Net Core MVC application to Azure. Th
 
 1. Click the **Deploy to Azure** button.
 
-    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FFBoucher%2FNot-a-Dog-Workshop%2Fmaster%2Fdeployment%2FdeployAzure.json" target="_blank"><img src="https://azuredeploy.net/deploybutton.png"/></a>
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FFBoucher%2FNot-a-Dog-Workshop%2Fmaster%2Fdeployment%2FdeployAzure.json?WT.mc_id=tohack-github-frbouche" target="_blank"><img src="https://azuredeploy.net/deploybutton.png"/></a>
 
 1. You will be prompt to login in Azure. Select the Microsoft account (outlook, Hotmail) to access your Azure subscription.
 

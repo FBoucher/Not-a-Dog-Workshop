@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_apis/build/status/FBoucher.Not-a-Dog-Workshop?branchName=master)](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_build/latest?definitionId=22&branchName=master)
+[![Build Status](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_apis/build/status/FBoucher.Not-a-Dog-Workshop?branchName=master&?WT.mc_id=tohack-github-frbouche)](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_build/latest?definitionId=22&branchName=master)
 
 # Not a Dog Workshop
 
@@ -51,7 +51,7 @@ Does our dog detector will work correctly?! It's time to test our application...
 
 At the top of this page there is a badge status
 
-[![Build Status](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_apis/build/status/FBoucher.Not-a-Dog-Workshop?branchName=master)](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_build/latest?definitionId=22&branchName=master)
+[![Build Status](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_apis/build/status/FBoucher.Not-a-Dog-Workshop?branchName=master&?WT.mc_id=tohack-github-frbouche)](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_build/latest?definitionId=22&branchName=master)
 
 Every check-in into the master branch will trigger an Azure Pipeline to build the project. This **Azure DevOps** project is public. Click on the badges to open the project and see all the details.
 
