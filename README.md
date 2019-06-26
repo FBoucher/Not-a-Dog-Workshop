@@ -55,7 +55,7 @@ At the top of this page there is a badge status
 
 Every check-in into the master branch will trigger an Azure Pipeline to build the project. This **Azure DevOps** project is public. Click on the badges to open the project and see all the details.
 
-[Azure DevOps](https://azure.microsoft.com/en-ca/services/devops/?WT.mc_id=cloud5mins-youtube-frbouche) is free! You can have:
+[Azure DevOps](https://azure.microsoft.com/en-ca/services/devops/?WT.mc_id=tohack-github-frbouche) is free! You can have:
 - Unlimited number of public or private **projects**
 - **Repositories** (or link your Git repo to it)
 - **Boards** to keep tracks of your works, tasks, issues.
@@ -65,7 +65,7 @@ Every check-in into the master branch will trigger an Azure Pipeline to build th
 
 ## Video version
 
-If you prefer I have a video where I walkthrough all the workshop.
+If you prefer I have a video where I walkthrough all the workshop (aussi disponible en francais!).
 
 [![YouTube](/medias/YouTubeThubnail.png)](https://youtu.be/ic-eP-gtFSo)
 

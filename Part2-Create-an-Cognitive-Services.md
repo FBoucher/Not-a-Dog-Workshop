@@ -111,7 +111,7 @@ In this workshop we used one of the Vision API available into the Azure Cognitiv
 
     Recognize, identify, caption, index, and moderate your pictures, videos, and digital ink content.
 
-[You can get started for free, see interactive demo and even get some starter kit here](https://azure.microsoft.com/en-ca/services/cognitive-services/?WT.mc_id=cloud5mins-youtube-frbouche)
+[You can get started for free, see interactive demo and even get some starter kit here](https://azure.microsoft.com/en-ca/services/cognitive-services/?WT.mc_id=tohack-github-frbouche)
 
 [azurePortal]: medias/azurePortal.png "The Azure Portal"
 [typeVision]: medias/typeVision.png "Create a Vision"

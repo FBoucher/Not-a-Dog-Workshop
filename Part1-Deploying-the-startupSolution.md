@@ -75,7 +75,7 @@ Then for all of then there is a "blob" of letter **6l3th**.  Of course, yours wi
 
 For the service plan, and the storage account we also added some short suffix to identify them. 
 
-All those settings are defined in the Azure Resource Manager (ARM) template that was used in the deployment. The ARM template is defined in the file [deployAzure.json](deployment/deployAzure.json). It is a very strong tool to deploy in Azure. You can learn more about ARM template [here.](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview?WT.mc_id=cloud5mins-youtube-frbouche)
+All those settings are defined in the Azure Resource Manager (ARM) template that was used in the deployment. The ARM template is defined in the file [deployAzure.json](deployment/deployAzure.json). It is a very strong tool to deploy in Azure. You can learn more about ARM template [here.](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview?WT.mc_id=tohack-github-frbouche)
 
 The deployment used by the Deploy to Azure button, use this ARM template. This will create the tree resources we need to get started in our project.
 
