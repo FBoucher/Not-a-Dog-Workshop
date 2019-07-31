@@ -205,7 +205,7 @@
     "outputs": {
         "websiteURL":{
             "type": "string",
-            "value": "[reference(resourceId('Microsoft.Web/sites',variables('webAppName')),'2018-02-01').endpoint]"
+            "value": "[concat('https://', reference(resourceId('Microsoft.Web/sites',variables('webAppName')),'2018-02-01').defaultHostName)]"
         }
     }
 }
