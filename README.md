@@ -69,3 +69,13 @@ If you prefer I have a video where I walkthrough all the workshop (aussi disponi
 
 [![YouTube](/medias/YouTubeThubnail.png)](https://youtu.be/ic-eP-gtFSo)
 
+
+## Wanna help?
+
+You find a bug or would like to add a feature, check out those resources:
+
+- To see the current work in progress :[GLO boards](https://app.gitkraken.com/glo/board/XQPiybIcWAAP_ToG)
+
+- Watch the behind the scene [videos](https://github.com/FBoucher/stream-projects#not-a-dog-workshop), and learn how this project was created. 
+
+- Check the [Contributing](CONTRIBUTING.md) document to get started. 
