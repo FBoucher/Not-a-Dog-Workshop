@@ -16,6 +16,14 @@
                 "description": "The name of your Git branch (Default: master)."
             },
             "defaultValue": "master"
+        },
+        "ApiVisionTier":{
+            "type": "string",
+            "defaultValue": "F0",
+            "allowedValues": ["F0", "S1"],
+            "metadata": {
+                "description": "Tier for the Vision API. Default is FREE (F0). However, only 1 free instance is allowed by subscription"
+            }
         }
     },
     "variables": {
@@ -24,7 +32,8 @@
         "storageName": "[concat(variables('webAppName'), 'stg')]",
         "appSvcPlanName": "[concat(variables('webAppName'), 'plan')]",
         "funcAppName": "[concat(variables('webAppName'), 'func')]",
-        "storagefuncName": "[concat(variables('webAppName'), 'stgfunc')]"
+        "storagefuncName": "[concat(variables('webAppName'), 'stgfunc')]",
+        "visionAPI": "[concat('smartvision', variables('suffix'))]"
     },
     "resources": [
         {
@@ -122,7 +131,9 @@
             "kind": "functionapp",
             "dependsOn": [
                 "[resourceId('Microsoft.Web/serverfarms',variables('appSvcPlanName'))]",
-                "[resourceId('Microsoft.Storage/storageAccounts', variables('storagefuncName'))]"
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('storagefuncName'))]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageName'))]",
+                "[resourceId('Microsoft.CognitiveServices/accounts', variables('visionAPI'))]"
             ],
             "properties": {
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appSvcPlanName'))]",
@@ -134,7 +145,7 @@
                         },
                         {
                             "name": "AzureWebJobsStorage",
-                            "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storagefuncName'), ';AccountKey=', listKeys(variables('storagefuncName'),'2015-05-01-preview').key1)]"
+                            "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageName'), ';AccountKey=', listKeys(variables('storageName'),'2015-05-01-preview').key1)]"
                         },
                         {
                             "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
@@ -151,6 +162,14 @@
                         {
                             "name": "FUNCTIONS_WORKER_RUNTIME",
                             "value": "dotnet"
+                        },
+                        {
+                            "name": "ComputerVision:ApiKey",
+                            "value": "[listKeys(variables('visionAPI'),'2016-02-01-preview').key1]"
+                        },
+                        {
+                            "name": "ComputerVision:Endpoint",
+                            "value": "[reference(resourceId('Microsoft.CognitiveServices/accounts', variables('visionAPI')),'2016-02-01-preview').endpoint]"
                         }
                     ]
                 }
@@ -159,16 +178,34 @@
         {
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2018-07-01",
-            "name": "storageFunc",
+            "name": "[variables('storagefuncName')]",
             "location": "[resourceGroup().location]",
             "tags": {
-                "displayName": "storageFunc"
+                "displayName": "[variables('storagefuncName')]"
             },
             "sku": {
                 "name": "Standard_LRS"
             },
             "kind": "StorageV2"
+        },
+        {
+            "apiVersion": "2017-04-18",
+            "name": "[variables('visionAPI')]",
+            "location": "[resourceGroup().location]",
+            "type": "Microsoft.CognitiveServices/accounts",
+            "kind": "ComputerVision",
+            "sku": {
+                "name": "[parameters('ApiVisionTier')]"
+            },
+            "properties": {
+                "customSubDomainName": "[variables('visionAPI')]"
+            }
         }
     ],
-    "outputs": {}
+    "outputs": {
+        "websiteURL":{
+            "type": "string",
+            "value": "[reference(resourceId('Microsoft.Web/sites',variables('webAppName')),'2018-02-01').endpoint]"
+        }
+    }
 }

@@ -1,3 +1,14 @@
 
+az group create --name hacktest --location eastus
+
+
 
 az group deployment create -n testlocal --template-file deployment\deployAzure.json -g hacktest --verbose
+
+
+
+
+az group deployment validate --template-file deployment/deployFinalAzure.json -g hacktest --verbose
+
+
+az group deployment create --name testlocal --template-file deployment/deployFinalAzure.json -g hacktest --verbose
