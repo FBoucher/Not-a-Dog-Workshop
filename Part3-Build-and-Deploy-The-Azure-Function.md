@@ -4,7 +4,7 @@ Now that we have some Artificial Intelligence (AI) that will analyze the images,
 
 To do this we will use an Azure Function. 
 
-> The Functions are part of the serverless offer of Microsoft. They provide an efficient way to execute code at scale without being expensive. [To learn more about Azure Function here](https://azure.microsoft.com/en-ca/services/functions/?WT.mc_id=tohack-github-frbouche).
+> The Functions are part of the serverless offering by Microsoft. They provide an efficient way to execute code at scale without being expensive. [To learn more about Azure Function here](https://azure.microsoft.com/en-ca/services/functions/?WT.mc_id=tohack-github-frbouche).
 
 ## Creating the Function App
 
@@ -51,7 +51,7 @@ Open the terminal, from the top menu **Terminal** or with the shortcut ( Ctrl + 
 
     dotnet add package Newtonsoft.Json
 
-If you look again the file `HackDemo-Func.csproj`, you will see that the package is now referenced. 
+If you look again at the file `HackDemo-Func.csproj`, you will see that the package is now referenced. 
 
 Repeat the previous command for the package 
 
@@ -125,11 +125,11 @@ namespace DogDemo.Function
 
 ```
 
-You can test to see if your solution compile by executing the following command in the terminal:
+You can test to see if your solution compiles by executing the following command in the terminal:
 
     dotnet build
 
-You may have some yellow warning message about Newtonsoft.Json version, search or a green Build succeeded.
+You may have some yellow warning messages about Newtonsoft.Json version, search for a green "Build succeeded".
 
 ![buildSucceeded][buildSucceeded]
 
