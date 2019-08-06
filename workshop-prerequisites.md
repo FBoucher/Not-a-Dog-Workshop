@@ -8,11 +8,11 @@ We will be creating a Web application in .NET Core. Therefore you will need the 
 
     dotnet --version
 
-If you have a version equal or greater to 2.1 your are fine. Otherwise we invite you to download a more recent version. In a web browser, navigate to [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download?WT.mc_id=tohack-github-frbouche). Select your OS between Windows, Linux, or MacOS and click the button Download .NET Core SDK
+If you have a version equal or greater to 2.1 you are fine. Otherwise we invite you to download a more recent version. In a web browser, navigate to [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download?WT.mc_id=tohack-github-frbouche). Select your OS between Windows, Linux, or MacOS and click the button Download .NET Core SDK
 
 ![dotnetcore][dotnetcore]
 
-Once the installer is downloaded follow the instruction in run it.  When the install is complete re-execute the comment to validate that you have a version equal or greater to 2.1
+Once the installer is downloaded follow the instructions to run it.  When the installation is complete re-execute the command to validate that you have a version equal or greater to 2.1
 
 # The Tools
 
@@ -20,7 +20,7 @@ Once the installer is downloaded follow the instruction in run it.  When the ins
 
 ![code][code]
 
-Visual Studio Code is a lightweight source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.
+Visual Studio Code (VSCode) is a lightweight source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.
 
 It's not a requirement but all labs will assume that you have it installed. To install Visual Studio Code, navigate to [code.visualstudio.com](https://code.visualstudio.com/?WT.mc_id=tohack-github-frbouche), and select your platform.
 
@@ -43,13 +43,11 @@ Congratulation, you just installed your first extension.
 
 ## Azure Subscription
 
-Having an Azure subscription is mandatory to be able to do the TOHacks Workshop. If you don't own an Azure subscription already, you can create your **free** account today. It comes with 200$ credit, so you can experience almost everything without spending a dime. 
+Having an Azure subscription is mandatory to be able to do the Not-A-Dog Workshop. If you don't own an Azure subscription already, you can create your **free** account today. It comes with 200$ credit, so you can experience almost everything without spending a dime.
 
 [Create your free Azure account today](https://azure.microsoft.com/en-us/free?WT.mc_id=tohack-github-frbouche)
 
 ![freeAzure][freeAzure]
-
-
 
 [code]: medias/code-screenshot.png "Visual Studio Code screenshot"
 [code-select]: medias/code-select.jpg
