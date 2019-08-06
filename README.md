@@ -1,5 +1,7 @@
 [![Build Status](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_apis/build/status/FBoucher.Not-a-Dog-Workshop?branchName=master&?WT.mc_id=tohack-github-frbouche)](https://dev.azure.com/cloud5mins/Not-a-Dog-Workshop/_build/latest?definitionId=22&branchName=master)
 
+[![Deploy to Azure](https://img.shields.io/badge/Deploy%20To-Azure-blue?logo=microsoft-azure)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FFBoucher%2FNot-a-Dog-Workshop%2Fmaster%2Fdeployment%2FdeployAzure.json?WT.mc_id=cloud5mins-github-frbouche)    ![Starts](https://img.shields.io/badge/dynamic/json?url=http://api.github.com/repos/fboucher/Not-a-Dog-Workshop&label=Stars&query=$.stargazers_count&color=blue)
+
 # Not a Dog Workshop
 
 This workshop is for beginners who would like to learn more about the cloud and the try some services available. Today artificial intelligence (AI) can benefit a lot of our application and most of the time it's easier than we think to implement it.
@@ -62,6 +64,9 @@ Every check-in into the master branch will trigger an Azure Pipeline to build th
 - Build and Release **Azure Pipeline** to have nice CI-CD processes.
 - So much more!
 
+## Resulting Solution
+
+If you are interested to deploy the end result (without doing all the workshop), go check this [one-step deployment](final/readme.md). 
 
 ## Video version
 
