@@ -47,6 +47,14 @@ Does our dog detector will work correctly?! It's time to test our application...
 
 **[How to use the Automatic Not a Dog Application](Part4-Its-time-to-play.md)**
 
+
+## Resulting Solution
+
+If you are interested to deploy the end result (without doing all the workshop), go check this one-step deployment. 
+
+**[Deploy the Automatic Not a Dog Solution](final/readme.md)**
+
+
 ---
 
 ## Learn More
@@ -64,9 +72,6 @@ Every check-in into the master branch will trigger an Azure Pipeline to build th
 - Build and Release **Azure Pipeline** to have nice CI-CD processes.
 - So much more!
 
-## Resulting Solution
-
-If you are interested to deploy the end result (without doing all the workshop), go check this [one-step deployment](final/readme.md). 
 
 ## Video version
 
