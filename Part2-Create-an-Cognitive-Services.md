@@ -83,7 +83,7 @@ To be able to use this API we will need to get its endpoint and the key.
 
 ## Coming Next
 
-You have now completed this part of the workshop. **You can continue with Part 3: [Build and Deploy The Azure Function](Part3-Build-and-Deploy-an-Azure-Function.md)**.
+You have now completed this part of the workshop. **You can continue with Part 3: [Build and Deploy The Azure Function](Part3-Build-and-Deploy-The-Azure-Function.md)**.
 
 ---
 
