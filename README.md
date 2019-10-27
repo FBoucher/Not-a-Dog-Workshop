@@ -78,7 +78,7 @@ If you prefer I have a video where I walkthrough all the workshop (aussi disponi
 
 [![YouTube](https://github.com/FBoucher/Not-a-Dog-Workshop/raw/master/medias/YouTubeThubnail.png)](https://youtu.be/ic-eP-gtFSo)
 
-## Wanna help?
+## Contributing
 
 If you find a bug or would like to add a feature, check out those resources:
 
@@ -86,4 +86,12 @@ If you find a bug or would like to add a feature, check out those resources:
 
 - Watch the behind the scene [videos](https://github.com/FBoucher/stream-projects#not-a-dog-workshop), and learn how this project was created.
 
-- Check the [Contributing](CONTRIBUTING.md) document to get started.
+Check out our [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing](CONTRIBUTING.md) docs. This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification.  Contributions of any kind welcome!
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
