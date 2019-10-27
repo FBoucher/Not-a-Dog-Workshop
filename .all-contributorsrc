@@ -19,6 +19,15 @@
         "doc",
         "code",
         "video"
+       ]
+    },
+    {
+      "login": "smabuk",
+      "name": "Simon Brookes",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2011834?v=4",
+      "profile": "https://github.com/smabuk",
+      "contributions": [
+        "doc"
       ]
     }
   ]
